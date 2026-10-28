@@ -290,8 +290,12 @@ const L = {
     490
    ],
    "iris": 38,
-   "lidTop": "#8b4932",
-   "skin": "#e6a284"
+   "lid": [
+    469,
+    446,
+    115,
+    87
+   ]
   },
   "R": {
    "box": [
@@ -305,8 +309,12 @@ const L = {
     507
    ],
    "iris": 38,
-   "lidTop": "#a35e43",
-   "skin": "#ecaa8b"
+   "lid": [
+    682,
+    465,
+    111,
+    85
+   ]
   }
  }
 };
@@ -356,7 +364,8 @@ function frame(){
 frame();
 
 function blink(which, cls){ for (const n of which){ const l = eyes[n].lid; l.classList.remove('blink'); void l.offsetWidth; l.classList.add(cls); } }
-(function blinkLoop(){ setTimeout(() => { blink(['L','R'],'blink'); blinkLoop(); }, 3200 + Math.random()*3000); })();
+// blinking is off until a real eyes-closed frame of the character is added
+// (function blinkLoop(){ setTimeout(() => { blink(['L','R'],'blink'); blinkLoop(); }, 3200 + Math.random()*3000); })();
 
 // sparkles
 const sky = document.querySelector('.sky');
